@@ -20,4 +20,7 @@ export default defineConfig(({ mode }) => ({
     },
   },
    base: '/paratodosveremweb/',
+   build: {
+    outDir: 'dist', // Garante que o build vai para a pasta dist
+  },
 }));
