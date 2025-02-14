@@ -61,12 +61,6 @@ Se você tiver alguma dúvida ou sugestão, sinta-se à vontade para entrar em c
 
 ---
 
-## 📜 Licença
-
-Este projeto é licenciado sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
----
-
 ## 💖 Agradecimentos
 
 A todos que colaboraram com sugestões, feedbacks e testes. Juntos, estamos tornando a comunicação digital mais inclusiva para todos!
