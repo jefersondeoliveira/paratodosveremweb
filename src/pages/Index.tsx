@@ -125,7 +125,6 @@ const Index = () => {
               <ul className="space-y-4">
                 {[
                   "Descrições precisas e detalhadas",
-                  "Suporte para múltiplos idiomas",
                   "Privacidade e segurança",
                   "Totalmente gratuito"
                 ].map((item, index) => (
