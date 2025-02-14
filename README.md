@@ -1,69 +1,72 @@
-# Welcome to your Lovable project
+# #ParaTodosVerem - Bot de Acessibilidade  
 
-## Project info
+O **#ParaTodosVerem** é um projeto que visa tornar a comunicação digital mais inclusiva. Este site apresenta um bot de WhatsApp que descreve imagens e figurinhas para pessoas com deficiência visual, permitindo que todos participem plenamente das conversas em grupo.
 
-**URL**: https://lovable.dev/projects/68f1b8d8-875a-4f17-83c6-7577024d1207
+---
 
-## How can I edit this code?
+## 📚 Sobre o Projeto
 
-There are several ways of editing your application.
+A comunicação através de imagens e figurinhas é uma parte importante das interações digitais. No entanto, pessoas com deficiência visual muitas vezes são excluídas dessa experiência. O **#ParaTodosVerem** foi criado para resolver esse problema, oferecendo descrições detalhadas de imagens compartilhadas no WhatsApp, tornando a comunicação mais acessível para todos.
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/68f1b8d8-875a-4f17-83c6-7577024d1207) and start prompting.
+## 🚀 Funcionalidades
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Descrição de Imagens e Figurinhas**: O bot gera descrições detalhadas para ajudar na compreensão do conteúdo visual.
+- **Suporte a Grupos e Conversas Privadas**: Funciona tanto em grupos quanto em conversas privadas no WhatsApp.
+- **Privacidade e Segurança**: Nenhuma imagem é armazenada, garantindo a privacidade dos usuários.
+- **Acesso Gratuito**: O serviço é totalmente gratuito para todos.
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🎨 Tecnologias Utilizadas
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 
-Follow these steps:
+### Frontend
+- **React.js**: Biblioteca JavaScript para criação de interfaces de usuário.
+- **Tailwind CSS**: Framework de design para estilização rápida e responsiva.
+- **shadcn/ui**: Componentes de UI para um design elegante e acessível.
+- **lucide-react**: Ícones modernos e personalizáveis.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Bot
+- **Node.js**: Para gerenciamento de rotas e integração com o serviço de e-mail.
+- **Baileys**: Biblioteca para integração com o WhatsApp.
+- **OpenAI**: Para geração de descrições detalhadas e precisas de imagens.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 🧪 Como Testar o Bot
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+Você pode testar o **#ParaTodosVerem** de forma simples:
 
-**Edit a file directly in GitHub**
+1. **Adicione o número do bot em seu grupo do WhatsApp** ou 
+2. **Inicie uma conversa privada** clicando no link abaixo:  
+   👉 [Clique aqui para conversar com o bot no WhatsApp](https://wa.me/5547996142243)
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Depois de adicionar o bot ao grupo ou iniciar uma conversa privada, basta enviar uma imagem ou figurinha e o bot responderá com uma descrição detalhada do conteúdo visual.
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🤝 Contribuição
 
-## What technologies are used for this project?
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests no GitHub para melhorias ou correções de bugs.
 
-This project is built with .
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 📧 Contato
 
-## How can I deploy this project?
+Se você tiver alguma dúvida ou sugestão, sinta-se à vontade para entrar em contato:
+- Email: [jefersondeoliveiralopes@gmail.com](mailto:jefersondeoliveiralopes@gmail.com)
 
-Simply open [Lovable](https://lovable.dev/projects/68f1b8d8-875a-4f17-83c6-7577024d1207) and click on Share -> Publish.
+---
 
-## I want to use a custom domain - is that possible?
+## 📜 Licença
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+Este projeto é licenciado sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
+
+## 💖 Agradecimentos
+
+A todos que colaboraram com sugestões, feedbacks e testes. Juntos, estamos tornando a comunicação digital mais inclusiva para todos!
