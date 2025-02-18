@@ -1,11 +1,14 @@
 
-import { Accessibility, Eye, MessageCircle, Heart, ArrowRight, MessageSquare } from "lucide-react";
+import { Accessibility, Eye, MessageCircle, Heart, ArrowRight, MessageSquare, X } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Section from "@/components/Section";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { useState } from "react";
 
 const Index = () => {
+  const [isPixModalOpen, setPixModalOpen] = useState(false);
+
   const openWhatsApp = () => {
     window.open('https://wa.me/5547996142243', '_blank');
   };
@@ -15,6 +18,17 @@ const Index = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  const openApoiaSe = () => {
+    window.open('https://apoia.se/paratodosverem', '_blank');
+  };
+
+  const pixCode = "00020126330014BR.GOV.BCB.PIX0111091854946905204000053039865802BR5901N6001C62070503***6304169B";
+
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(pixCode);
+    alert("Código PIX copiado!");
   };
 
   return (
@@ -31,7 +45,7 @@ const Index = () => {
               Tornando o WhatsApp mais acessível para todos
             </h1>
             <p className="text-lg text-muted-foreground">
-              Um bot que descreve imagens e figurinhas para pessoas com deficiência visual, 
+              Um bot que descreve imagens e figurinhas para pessoas com deficiência visual,
               tornando a comunicação mais inclusiva.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -58,7 +72,7 @@ const Index = () => {
           <div className="space-y-4">
             <h2 className="text-3xl md:text-4xl font-bold">Como Usar</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Adicionar o #ParaTodosVerem em seu grupo é simples e rápido. 
+              Adicionar o #ParaTodosVerem em seu grupo é simples e rápido.
               Você também pode interagir com o bot em conversas privadas!
               Siga os passos abaixo:
             </p>
@@ -71,7 +85,7 @@ const Index = () => {
                 title: "Adicione o Bot",
                 description: "Adicione o número do bot em seu grupo do WhatsApp ou inicie uma conversa privada",
                 action: (
-                  <Button 
+                  <Button
                     onClick={openWhatsApp}
                     className="mt-4 w-full"
                     variant="outline"
@@ -150,15 +164,46 @@ const Index = () => {
             Sua doação ajuda a manter o serviço ativo e a desenvolver novas funcionalidades.
           </p>
           <div className="flex justify-center gap-4">
-            <Button size="lg">
+            <Button size="lg" onClick={() => setPixModalOpen(true)}>
               Doar via PIX
             </Button>
-            <Button size="lg" variant="outline">
-              Doar via PayPal
+            <Button size="lg" variant="outline" onClick={openApoiaSe}>
+              Apoie via Apoia.se
             </Button>
           </div>
         </div>
       </Section>
+
+      {isPixModalOpen && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+          <div className="bg-white rounded-lg p-8 w-full max-w-md relative">
+            <button
+              className="absolute top-4 right-4"
+              onClick={() => setPixModalOpen(false)}
+            >
+              <X className="w-6 h-6" />
+            </button>
+            <h2 className="text-2xl font-bold mb-4 text-center">Doação via PIX</h2>
+            <img 
+              src="/qrcode-pix.png" 
+              alt="QR Code PIX" 
+              className="mx-auto w-48 h-48 mb-4"
+            />
+            <p className="text-center mb-4 text-muted-foreground">
+              Escaneie o QR Code ou copie o código abaixo:
+            </p>
+            <div className="bg-gray-100 p-4 rounded-lg text-sm break-words mb-4">
+              {pixCode}
+            </div>
+            <Button 
+              onClick={copyToClipboard} 
+              className="w-full"
+            >
+              Copiar Código PIX
+            </Button>
+          </div>
+        </div>
+      )}
 
       <Section id="contato" className="bg-primary/5">
         <div className="max-w-2xl mx-auto space-y-8">
@@ -205,9 +250,14 @@ const Index = () => {
                 required
               />
             </div>
-            <Button type="submit" className="w-full">
-              Enviar mensagem
-            </Button>
+            <a
+              href={`mailto:jefersondeoliveiralopes@gmail.com?subject=Mensagem de ${(document.getElementById('name') as HTMLInputElement)?.value || 'novo contato sobre paratodosverem'}&body=${(document.getElementById('message') as HTMLTextAreaElement)?.value || ''}`}
+              className="w-full"
+            >
+              <Button type="button" className="w-full">
+                Enviar mensagem
+              </Button>
+            </a>
           </form>
         </div>
       </Section>
