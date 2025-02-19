@@ -185,7 +185,7 @@ const Index = () => {
             </button>
             <h2 className="text-2xl font-bold mb-4 text-center">Doação via PIX</h2>
             <img 
-              src="/qrcode-pix.png" 
+              src="paratodosveremweb/qrcode-pix.png" 
               alt="QR Code PIX" 
               className="mx-auto w-48 h-48 mb-4"
             />
